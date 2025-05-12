@@ -1,0 +1,249 @@
+/* src/App.css */
+:root {
+  --primary-color: #6200ea;
+  --primary-light: #7c4dff;
+  --secondary-color: #03dac6;
+  --background-color: #f5f5f5;
+  --card-color: #ffffff;
+  --text-color: #333333;
+  --text-light: #666666;
+  --danger-color: #cf6679;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--primary-light);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.toggle-form-btn {
+  background-color: var(--primary-color);
+}
+
+.form-container {
+  margin-bottom: 2rem;
+}
+
+.poem-form {
+  background-color: var(--card-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.poem-form h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid #ddd;
+}
+
+.tabs button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.poem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.poem-card {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.poem-card.read {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.poem-card.unread {
+  border-left: 4px solid var(--primary-color);
+}
+
+.poem-header {
+  margin-bottom: 1rem;
+}
+
+.poem-title {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.poem-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.poem-content {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.poem-content pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+.poem-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.read-btn {
+  background-color: #9c27b0;
+}
+
+.read-btn.marked {
+  background-color: #7b1fa2;
+}
+
+.favorite-btn {
+  background-color: #ff9800;
+}
+
+.favorite-btn.active {
+  background-color: #f57c00;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  margin-left: auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .poem-actions {
+    flex-direction: column;
+  }
+  
+  .delete-btn {
+    margin-left: 0;
+  }
+}
