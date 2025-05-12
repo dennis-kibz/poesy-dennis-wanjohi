@@ -1,8 +1,7 @@
-# Poem Manager App
+# Poem App
 
 A React application for managing your collection of poems. Create, read, mark as favorite, and organize your poetry collection all in one place.
 
-![Demo GIF](./demo.gif)
 
 ## Features
 
@@ -36,23 +35,17 @@ poem-manager/
 
 ## Installation and Setup
 
-1. Clone the repository:
-```
-git clone https://github.com/your-username/poem-manager.git
-cd poem-manager
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```
 npm install
 ```
 
-3. Run the development server:
+2. Run the development server:
 ```
 npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ## How to Use
 
@@ -67,8 +60,7 @@ npm start
 ## Technologies Used
 
 - React (Hooks)
-- CSS3
-- Local Storage for data persistence
+- CSS
 
 ## License
 
