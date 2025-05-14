@@ -19,7 +19,6 @@ A React application for managing your collection of poems. Create, read, mark as
 poem-manager/
 ├── public/
 │   ├── index.html
-│   └── favicon.ico
 ├── src/
 │   ├── components/
 │   │   ├── PoemForm.jsx    # Form to create new poems
